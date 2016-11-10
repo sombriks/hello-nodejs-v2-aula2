@@ -51,7 +51,7 @@ geany hello1.js
 
 ```javascript
 // hello1.js
-console.log("Hello, friend! %s",process.argv[0])
+console.log(`Hello, friend! ${process.argv[0]}`)
 ```
 
 - execute via linha de comando
@@ -75,7 +75,7 @@ geany hello2.js
 
 ```javascript
 // hello2.js
-console.log("Estamos no ambiente de [%s]", process.env.NODE_ENV)
+console.log(`Estamos no ambiente de ${process.env.NODE_ENV}`)
 ```
 
 - definir uma variável de ambiente agora
@@ -104,9 +104,9 @@ const rl = readline.createInterface({
 
 rl.question('Digite um número\n', (num) => {
   if(isNaN(num))
-    console.log('%s não é um número válido', num);
+    console.log(`${num} não é um número válido`);
   else
-    console.log("Você digitou o número %s", num);
+    console.log(`Você digitou o número ${num}`);
   rl.close();
 });
 ```
